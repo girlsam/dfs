@@ -62,3 +62,7 @@
 
     # Sync
     sync = plu && pso
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true

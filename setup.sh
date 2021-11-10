@@ -21,5 +21,7 @@ ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
+cp -R ./extensions/*  ~/.vscode-server/extensions
+
 # Reload zsh config
 source ~/.zshrc
