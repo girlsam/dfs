@@ -18,4 +18,4 @@ if [ $SPIN ]; then
 fi
 
 
-alias g_update="stop; gfa; git rebase $(git_main_branch); update"
+alias g_update="stop; gfa; grbom; update"
