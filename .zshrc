@@ -16,3 +16,6 @@ source $ZSH/oh-my-zsh.sh
 if [ $SPIN ]; then
   source ~/dotfiles/spin.sh
 fi
+
+
+alias g_update="stop; gfa; git rebase $(git_main_branch); update"
