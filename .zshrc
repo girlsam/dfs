@@ -18,7 +18,7 @@ if [ $SPIN ]; then
 fi
 
 
-alias g_update="stop; gfa; grbom; update"
+alias g_update="stop && gfa && grbom && update"
 
 run_focused_storybook () {
     kill $(lsof -t -i:9013)
