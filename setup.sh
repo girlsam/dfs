@@ -1,12 +1,8 @@
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-# Install the Powerlevel10k theme
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
-ln -sf ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k/powerlevel10k.zsh-theme ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k.zsh-theme
-
-# Add the preferred Powerlevel10k configuration
-ln -sf ~/dotfiles/.p10k.zsh ~/.p10k.zsh
+# Install starship
+curl -sS https://starship.rs/install.sh | sh
 
 # Install Oh My Zsh plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -20,8 +16,6 @@ mv ~/.gitconfig ~/.gitconfig.old
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
-
-cp -R ./extensions/*  ~/.vscode-server/extensions
 
 # Reload zsh config
 source ~/.zshrc

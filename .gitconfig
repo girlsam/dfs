@@ -47,6 +47,7 @@
     psu  = push upstream
     psum = push upstream master
     psug = push upstream gh-pages
+    pf = push --force-with-lease
 
     # Remote
     ra  = remote add
@@ -66,3 +67,5 @@
 	rebase = true
 [rebase]
 	autoStash = true
+[push]
+    default = current

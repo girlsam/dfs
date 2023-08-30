@@ -1,7 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
 plugins=(
   git
   zsh-autosuggestions
@@ -10,8 +8,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(starship init zsh)"
 
 if [ $SPIN ]; then
   source ~/dotfiles/spin.sh
@@ -25,7 +22,7 @@ run_focused_storybook () {
     STORYBOOK_FOCUS=$1/**/*.stories.tsx node ./.storybook/spin/server.js
 }
 
-alias rfs="run_focused_storybook" 
+alias rfs="run_focused_storybook"
 
 alias tu="TEST_WITH_UPLIFT=1 yarn test"
 alias t="yarn test"
