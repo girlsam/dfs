@@ -10,22 +10,13 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 if [ $SPIN ]; then
   source ~/dotfiles/spin.sh
 fi
 
+alias update="dev stop && dev up && dev start"
 
-alias g_update="stop && gfa && grbom && update"
-
-run_focused_storybook () {
-    kill $(lsof -t -i:9013)
-    STORYBOOK_FOCUS=$1/**/*.stories.tsx node ./.storybook/spin/server.js
-}
-
-alias rfs="run_focused_storybook" 
-
-alias tu="TEST_WITH_UPLIFT=1 yarn test"
+alias gca="git commit --amend"
+alias gcan="got commit --amend --no-edit"
+alias gpf="git push --force-with-lease"
 alias t="yarn test"
