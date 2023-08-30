@@ -19,4 +19,8 @@ alias update="dev stop && dev up && dev start"
 alias gca="git commit --amend"
 alias gcan="got commit --amend --no-edit"
 alias gpf="git push --force-with-lease"
-alias t="yarn test"
+
+alias cdw="cd /home/spin/src/github.com/Shopify/web"
+alias cdc="cd cd /home/spin/src/github.com/Shopify/shopify"
+
+alias yt="yarn test --watch"
