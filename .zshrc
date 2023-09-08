@@ -24,5 +24,5 @@ run_focused_storybook () {
 
 alias rfs="run_focused_storybook"
 
-alias tu="TEST_WITH_UPLIFT=1 yarn test"
 alias t="yarn test"
+alias D="dev"
